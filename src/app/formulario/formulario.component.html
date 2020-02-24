@@ -1,0 +1,28 @@
+<div class="container">
+  <form novalidate [formGroup]="form" (ngSubmit)="onSubmit()">
+     <div class="form-group">
+        <label for="">Título</label>
+        <input class="form-control" type="text" name="titulo" formControlName="titulo" />
+  
+        <label for="">Texto</label>
+        <textarea class="form-control" name="texto" id="" cols="30" rows="10" formControlName="texto" ></textarea>
+  
+        <label for="">Autor</label>
+        <input class="form-control" type="text" name="autor" formControlName="autor" />
+  
+        <label for="">Imagen</label>
+        <input class="form-control" type="text" name="imagen" formControlName="imagen" />
+       
+        <label for="">Categoría</label>
+    
+        <select class="form-control" name="" id="" formControlName="categoria">
+          <option value="Noticias">Noticias</option>
+          <option value="Tecnología">Tecnología</option>
+          <option value="cultura">Cultura</option>
+          <option value="deportes">Deportes</option>
+        </select>
+    
+        <button class="btn btn-primary" (click)="enviarPost()">Manda</button>
+     </div>
+    </form>
+</div>
